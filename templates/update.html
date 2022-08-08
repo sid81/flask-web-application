@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>project 1</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel= "stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-11/css/all.css" integrity="sha512-xO/VZFNBvip9IT+BD6Nq/pHdBvKeFcwygKqARlegjQ+5A68KsMSYrPbGP1oYow5ec9Tqq8peJXcn5J1bD4O00w==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css" integrity="sha512-9iWaz7iMchMkQOKA8K4Qpz6bpQRbhedFJB+MSdmJ5Nf4qIN1+5wOVnzg5BQs/mYH3sKtzY+DOgxiwMz8ZtMCsw==" crossorigin="anonymous" />
+
+</head>
+<body>
+	<body>
+	<nav class="navitem bg-dark">
+		<div class="container">
+			<h1 class="logo text-light">WT</h1>
+	        <ul class="item">
+		          <li><a href="/">HOME</a></li>
+		          <li><a href="about.html">ABOUT</a></li>
+		          <li><a href="contact.html">CONTACT</a></li>
+		          <!-- <div class="clearfix"></div> -->
+	        </ul>
+	    </div>
+	</nav>
+
+	<section class="contact">
+	<div class="container">
+		<div class="adress">
+			<div class="loc">
+				<i class="fas fa-map-marker-alt fa-2x text-red"></i>
+                 <h2 class="text-gray">Location</h2>
+                 <p>2nd Street,Boloshai Booze,oswaldo,Ohio State,U.S.A</p>
+			</div>
+			<div class="email">
+				<i class="fas fa-envelope fa-2x text-red"></i>
+                 <h2 class="text-gray">E-mail</h2>
+                 <p>teflonmafia@yahoo.com</p>
+			</div>
+			<div class="call">
+				 <i class="fas fa-phone-square-alt fa-2x text-red"></i>
+                  <h2 class="text-gray">Call</h2>
+                  <p>+91-654336688</p>
+			</div>
+			<img src="{{ url_for('static',filename='img/camb.jpg') }}">
+		</div>
+
+		<div class="form ">
+			<form  action="/update/{{users.sno}}" method="POST" class="">
+				<h1 class="text-black">Contact us</h1>
+				<p class="text-gray">Let us know your queries,suggestion and concern by filling out the contact form below</p>
+				<div>
+					<label for="username">Username</label>
+					<input type="text" name="username" value="{{users.username}}">
+				</div>
+				<div>
+					<label for="email">Email</label>
+					<input type="email" name="email" value="{{users.email}}">
+				</div>
+				<div>
+					<label for ="phoneno">Phone</label>
+					<input type="text" name="phoneno" value="{{users.phoneno}}">
+				</div>
+				<div>Message<textarea ></textarea></div>
+				<button type="submit" class="button">update</button>
+			</form>
+		</div>
+		
+	</div>
+	</section>
+
+
+	<div class="cocko">
+		<h4>users list</h4>
+					
+			
+				
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope='col'>SNo</th>
+							<th scope='col'>username</th>
+							<th scope='col'>email</th>
+							<th scope='col'>phoneno</th>
+							<th scope='col'>Time</th>
+							<th scope='col'>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+			{% for users in allusers %}
+			<tr>
+				<th scope='row'>{{loop.index}}</th>
+				<td>{{users.username}}</td>
+				<td>{{users.email}}</td>
+				<td>{{users.phoneno}}</td>
+				<td>{{users.date_created}}</td>
+				<td><button class="z2"><a href="/update/{{users.sno}}" type="button" class="button mx-1">Update</button></td>
+				<td><button class="z2"><a href="/delete/{{users.sno}}" type="button" class="button mx-1">Delete</button></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+			
+			
+		
+	</div>
+
+
+	<footer class="last ">
+	<div class="social">
+		<i class="fab fa-facebook fa-3x"></i>
+		<i class="fab fa-instagram fa-3x"></i>
+		<i class="fab fa-twitter fa-3x"></i>
+	</div>
+	<p>World Travel &copy; 2021,All Rights Reserved</p>
+</footer>
+
+
+</body>
+</html>

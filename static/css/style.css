@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3{
+	font-size: 3.3rem;
+	font-weight: 500;
+}
+.ut{
+height: 98vh;
+background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)); 
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;/*header content tyling related*/
+}
+.navitem .logo{
+	font-size: 3.3rem;
+	font-weight: 500;
+	padding: 1rem 0;
+	float: left;
+}
+
+.navitem .item{
+	margin-top: 1.5rem;
+	float: right;
+
+}
+.navitem .item li{
+	display: inline-block;
+	margin: 1rem;
+	list-style: none;
+}
+
+
+li a{
+	font-size: 1.6rem;
+	color: white;
+	text-decoration: none;
+	padding-bottom: 0.3rem;
+	letter-spacing: 0.08em;
+}
+
+li a:link,
+li a:visited{
+	color:#f4f4f4;
+}
+li a:hover{	
+	border-bottom: 1px solid red;
+}
+.navitem::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.container{
+	max-width: 900px;/*this depends on user to set width*/
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+
+
+/*##########utility classes########*/
+.text-red{
+	color:#e63946;
+}
+.text-light{
+	color: #f4f4f4;
+}
+.text-black{
+	color: #333333;
+}
+.text-gray{
+	color: #555555;
+}
+.bg-dark{
+	background-color: #263238;
+}
+/*#########################header content style##########################*/
+.header-content{
+			/*border:2px solid white;*/
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			letter-spacing: 0.08em;
+			background: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15))
+}
+.header-content h1{
+	padding-bottom: .4em;
+	font-weight: 700;
+}
+.header-content p{
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+.header-content .button,.row .text-box .button {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin: 1em 1em;
+	padding: 0.5em 1em;/*padding will change according to change of font-size*/
+}
+.header-content .button-primary {
+	background-color: #fff;
+	border-radius: 10rem;
+}
+.row .text-box .button-section{
+	border:2px solid #e63496;
+    border-radius: 10rem;
+    background: #fff;
+    color: #e63496;
+}
+/*###########showcase section styling############*/
+.showcase{
+	background-color: #ddd;
+	padding: 8rem 0;
+}
+.row{
+	height: 25rem;
+	/*border:2px solid red;*/
+	background: white;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.3);
+}
+.row1{
+margin-bottom: 8rem;
+}
+.row1 .img-box,.row2 .text-box{
+	float: left;
+	width: 50%;
+	height: 100%;
+	/*border:2px solid blue;*/
+}
+.row1 .text-box,.row2 .img-box{
+	float: right;
+	width: 50%;
+	height: 100%;
+	/*border: 2px solid green;*/
+
+}
+.row .img-box img
+{
+	display: inline-block;
+	width:100%;
+	height: 100%;
+	object-fit: cover;/*so that aspect ratio will not change*/
+}
+.row .text-box h2{
+	font-size: 3rem;
+	margin-bottom: 0.3em;
+	padding: 1rem;
+	
+}
+.row .text-box p{
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	padding: 0 2rem;
+	line-height: 1.8rem;
+}
+.row .text-box a{
+	margin: 1rem 1rem;
+}
+.header-content a:hover,.row .text-box a:hover{
+	background-color: #fcf3f2;
+}
+.row::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+/*###############feature section################*/
+.feature{
+	padding: 8rem 0;
+}
+.box-wrap{
+	/*border:2px solid green;*/
+	text-align: center;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.37);
+
+}
+.box-wrap .Adventure{
+width: 33.33%;
+float: left;
+/*border: 2px solid black;*/
+padding: 2rem;
+background-color: #263238;
+color: #fff;
+}
+.box-wrap .Affordable{
+width: 33.33%;
+float: left;
+/*border: 2px solid black;*/
+padding: 2rem;
+background:linear-gradient(25deg,#d64c7f,#ee4758 50%); 
+color: #fff;
+}
+.box-wrap .Experience{
+width: 33.33%;
+float: left;	
+/*border: 2px solid black;*/
+padding: 2rem;
+background-color: #263238;
+color: #fff;
+}
+.box-wrap h2{
+	font-size: 2.3rem;
+	margin-bottom: 0.6em;
+
+}
+.box-wrap p{
+	letter-spacing: 0.08em;
+	font-size: 500;
+		line-height: 1.5rem;
+}
+.box-wrap::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+/*#############footer sectiom###############*/
+.last{
+	text-align: center;
+	padding: 1rem 0;
+	/*border:2px solid yellow;*/
+	background-color: #263238;
+	color: #f4f4f4;
+	letter-spacing: 0.08em;
+
+}
+.last .social
+{
+	/*border: 2px solid blue;*/
+	padding: 0.9rem 0;
+}
+.last .social i{
+	margin:0.2rem 1rem;
+}
+
+
+/*###########About page#############*/
+
+
+.about h2{
+margin-top:  3rem; 
+padding: 0.5rem 0;
+font-size: 2.3rem;
+border-bottom: 3px solid #e63946;
+}
+.about p{
+	letter-spacing: 0.08em;
+	font-size: 500;
+	line-height: 1.7rem;
+	padding: 1rem 0;
+}
+.about-wrap .left{
+	float: left;
+width: 50%;
+
+}
+.about-wrap .right{
+float: right;
+width: 50%;
+}
+.about-wrap{
+	text-align: center;
+}
+.about-wrap::after{
+
+  content: "";
+  clear: both;
+  display: block;
+}
+.about-wrap li{
+	list-style: none;
+	text-decoration: none;
+	line-height: 2rem;
+	
+}
+.about-wrap li::before{
+	content: "\2713";
+	color: #e63946;
+	font-weight: bold;
+	padding-right: 0.5rem;
+}
+.count .count1{
+	float: left;
+  width: 25%;
+}
+.count .count2{
+	float: left;
+  width: 25%;
+}
+.count .count3{
+float: left;
+  width: 25%;
+}
+.count .count4{
+float: left;
+  width: 25%;
+}
+.count{
+	text-align: center;
+	margin-top: 1.4rem ;
+	/*border: 2px solid red;*/
+	padding: 0.5em;   
+}
+.count span{
+	font-size: 2.3rem;
+	font-weight: 700;
+	color: #e63946;
+}
+.count p{
+	color: #555;
+	font-weight: 700;
+	font-size: 1rem;
+	letter-spacing: 0.18em;
+}
+.count::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.banner{
+	/*border: 2px solid red;*/
+	background:linear-gradient(25deg,#d64c7f,#ee4758 50%); 
+	color: #f4f4f4;
+	padding: 1rem;
+	margin-top: 0.5rem;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.37);
+}
+.banner .left{
+float: left;
+font-weight: 700;
+font-size: 1.3rem;
+width: 60%;
+}
+.banner .right{
+	float: right;
+	width: 40%;
+	text-align: center;
+	display: inline;
+	font-weight: 700;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	border: 2px solid white;
+	letter-spacing: 0.08em;
+}
+.banner .right a{
+	text-decoration: none;
+	list-style: none;
+	color: #f4f4f4;
+}
+.banner::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*##################contact page style##########################*/
+.contact{
+	padding:3rem 0;	
+}
+.contact .adress{
+background: #fff;
+float: left;
+/*border:2px dotted blue;*/
+width: 49%;
+padding: 1rem;
+}
+.contact .adress i{
+	display: inline-block;
+	padding: 0 0.5rem;
+}
+
+.contact .adress h2{
+	font-size: 2.3rem;
+	display: inline;
+	text-transform: uppercase;
+}
+.contact .adress p{
+	padding: 1rem 0;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+}
+.contact::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.contact img{
+	max-width: 90%;
+	max-height:35rem; 
+	min-height: 33rem;
+	object-fit: cover;
+	object-position: right;
+}
+.contact .form{
+float: right;
+/*border:2px dotted blue;*/
+width: 49%;
+background: #fff;
+font-size: 1.6rem;
+padding: 1rem ;
+}
+
+.contact .form h1{
+	font-size: 2.5rem;
+	margin:  0.5rem 0;
+	letter-spacing: 0.05em;
+	
+}
+.contact .form h1::after{
+    content: "";
+	display: block;
+	border:2px solid #ee4758;
+	width: 100%;
+}
+.contact .form input{
+	display: block;
+	width: 100%;
+	margin-bottom: 1.2rem;
+}
+.contact .form p{
+font-size: 1.3rem;
+padding: 1rem 0;
+line-height: 1.7rem;
+letter-spacing: 0.05em;
+}
+.contact .form::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.cocko::after
+{
+	content: "";
+	display: block;
+	clear: both;
+
+}
+.contact .form input::after{
+	content: "*";
+	color: #e63946;
+}
+.contact .form textarea{
+	display: block;
+	width: 100%;
+	margin-bottom: 1.2rem;
+	height: 22.6rem;
+}
+.contact .form .button,.z2{
+	display: block;
+	margin: 0 auto;
+	padding: 0.5rem 3em;
+	font-size: 1.7rem;
+	text-transform: uppercase;
+	background: #e63946;
+	 color: #fff;
+	 outline: none;
+	 cursor: pointer;
+}
+/*#####################Responsive website#####################*/
+
+@media (max-width: 500px){
+	html{
+		font-size: 50%;/*8px*/
+	}
+	.navitem .item,.navitem .logo{
+		float: none;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.row{
+		height: auto;
+		width: 100%;
+
+	}
+	.row1 .img-box,.row2 .text-box,.row1 .text-box,.row2 .img-box{
+		float: none;
+		display: block;
+		width: 100%;
+		text-align: center;
+
+	}
+	.box-wrap .Adventure,.box-wrap .Affordable,.box-wrap .Experience {
+		float: none;
+		width: 100%;
+		display: block;
+		margin-bottom: 2rem;
+		
+	}
+	.box-wrap{
+		box-shadow: none;
+	}
+	.banner .right,.banner .left{
+		float: none;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+	.contact .form,.contact .adress{
+		float: none;
+		width: 100%;
+		height: auto;
+		margin-bottom: 5rem;
+	}
+}
+ .pcsahoo{
+	font-size: 2rem;
+}

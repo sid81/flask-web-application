@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>project 1</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<body background= "{{ url_for('static',filename='/img/tour.jpg') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> 
+	<link rel= "stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-11/css/all.css" integrity="sha512-xO/VZFNBvip9IT+BD6Nq/pHdBvKeFcwygKqARlegjQ+5A68KsMSYrPbGP1oYow5ec9Tqq8peJXcn5J1bD4O00w==" crossorigin="anonymous" />
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css" integrity="sha512-9iWaz7iMchMkQOKA8K4Qpz6bpQRbhedFJB+MSdmJ5Nf4qIN1+5wOVnzg5BQs/mYH3sKtzY+DOgxiwMz8ZtMCsw==" crossorigin="anonymous" /> 
+</head>
+<body>
+
+<header class="ut">
+	<nav class="navitem">
+		<div class="container">
+			<h1 class="logo text-light">WT</h1>
+	        <ul class="item">
+		          <li><a href="index.html">HOME</a></li>
+		          <li><a href="about.html">ABOUT</a></li>
+		          <li><a href="/">CONTACT</a></li>
+		          <!-- <div class="clearfix"></div> -->
+	        </ul>
+	    </div>
+	</nav>
+	<div class="header-content">
+		<h1 class="text-light">TRAVEL THE WORLD</h1>
+		<p class="text-light">Travel the arctic,experience the greatness,it's best gift given by nature </p>
+		<a href="#explore" class="button button-primary text-red">Explore places</a>
+	</div>
+</header>
+
+<section class="showcase" id="explore">
+<div class="container">
+	<div class="row row1">
+		<div class="img-box">
+			<img src="{{ url_for('static',filename='img/giza.jpg') }}">
+		</div>
+
+        <div class="text-box">
+        	                 <h2 class="text-black">PYRAMID,EGYPT</h2>
+        	                 <p class="text-gray">A pyramid (from Greek: πυραμίς pyramís) is a structure whose outer surfaces are triangular and converge to a single step at the top, making the shape roughly a pyramid in the geometric sense. The base of a pyramid can be trilateral, quadrilateral, or of any polygon shape</p>
+        	                 <a href="" class="button button-section ">MORE</a>
+
+        </div>
+	    </div>
+	<div class="row row2">
+		<div class="img-box">
+            <img src="{{ url_for('static',filename='img/tower.jpg') }}">
+		</div>
+        <div class="text-box">
+        	        	                 <h2 class="text-black">TOWERBRIDGE,U.K</h2>
+        	        	                 <p class="text-gray">Tower Bridge is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become a world-famous symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile upstream</p>
+        	        	                 <a href="" class="button button-section ">MORE</a>
+
+        </div>
+
+
+	</div>
+</div>
+</section>
+
+<section class="feature">
+	<div class="container">
+		<div class="box-wrap">
+			<div class="Adventure ">
+				<i class="fas fa-map-marked-alt fa-2x"></i>
+				<h2>Adventure</h2>
+				<p>Experience is the process through which conscious organisms perceive the world around them. Experiences can be accompanied by active awareness on the part of the person having the experience, although they need not be</p>
+			</div>
+			<div class="Affordable">
+				<i class="fas fa-route fa-2x"></i>
+				<h2>Affordable</h2>
+				<p>Experience is the process through which conscious organisms perceive the world around them. Experiences can be accompanied by active awareness on the part of the person having the experience, although they need not be</p>
+			</div>
+			<div class="Experience">
+				<i class="fas fa-road fa-2x"></i>
+				<h2>Experience</h2>
+				<p>Experience is the process through which conscious organisms perceive the world around them. Experiences can be accompanied by active awareness on the part of the person having the experience, although they need not be</p>
+			</div>			
+		</div>
+	</div>
+</section>
+
+<footer class="last ">
+	<div class="social">
+		<i class="fab fa-facebook fa-3x"></i>
+		<i class="fab fa-instagram fa-3x"></i>
+		<i class="fab fa-twitter fa-3x"></i>
+	</div>
+	<p>World Travel &copy; 2021,All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
